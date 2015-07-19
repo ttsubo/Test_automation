@@ -119,7 +119,10 @@ class TestAutomation(app_manager.RyuApp):
                 bmp_result = self.bmp.bmp_q.get()
                 LOG.debug("bmp_result=[%s]"%bmp_result)
                 if bmp_result['vpnv4_prefix'] == None:
-                    target_prefix = bmp_result['prefix']
+                    if bmp_result['prefix'] == None:
+                        target_prefix = None
+                    else:
+                        target_prefix = bmp_result['prefix']
                 else:
                     target_prefix = bmp_result['vpnv4_prefix']
 

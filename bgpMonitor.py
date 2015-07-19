@@ -154,6 +154,7 @@ class BgpMonitor(app_manager.RyuApp):
         bmp_result['peer_bgp_id'] = msg.peer_bgp_id
         bmp_result['event_type'] = "route_refresh"
         bmp_result['peer_bgp_id'] = msg.peer_bgp_id
+        bmp_result['prefix'] = None
         bmp_result['route_dist'] = None
         bmp_result['vpnv4_prefix'] = None
         bmp_result['nexthop'] = None
