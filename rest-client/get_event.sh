@@ -39,6 +39,7 @@ def print_event_result(event_result):
     show_neighbor_result = event_result['event']['show_neighbor_result']
     show_rib_result = event_result['event']['show_rib_result']
 
+    print ""
     print "-------------------------------------"
     print "Event Infomation"
     print "-------------------------------------"

@@ -25,18 +25,12 @@ def request_info(operator, url_path, method, request):
 
     elif method == "POST":
         request = request
-        print url_path
-        print request
         session.request("POST", url_path, request, header)
     elif method == "PUT":
         request = request
-        print url_path
-        print request
         session.request("PUT", url_path, request, header)
     elif method == "DELETE":
         request = request
-        print url_path
-        print request
         session.request("DELETE", url_path, request, header)
 
     return json.load(session.getresponse())
